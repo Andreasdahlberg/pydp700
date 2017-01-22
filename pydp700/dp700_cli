@@ -5,7 +5,7 @@ import sys
 import argparse
 
 #sys.path.append('../')
-from dp711 import PowerSupply
+from dp700 import PowerSupply
 
 def main():
     """Parse arguments and configure the power supply."""
