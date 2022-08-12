@@ -28,7 +28,7 @@ MODEL_PARAMETERS = {
 
 class PowerSupply(object):
     """ A remote programmable DP700 series power supply."""
-    def __init__(self, port, baudrate=115200, timeout=0.2):
+    def __init__(self, port, baudrate=9600, timeout=0.2):
         self._serial_port = serial.Serial(port, baudrate, timeout=timeout)
         self._get_device_identification()
 
