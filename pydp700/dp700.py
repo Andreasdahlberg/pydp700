@@ -52,6 +52,10 @@ class PowerSupply(object):
 
 
     def __exit__(self, type, value, traceback):
+        # Return back to local control before exiting
+        command_str = ':SYST:LOC\n'
+        command = command_str.encode("utf-8")
+        self._execute_command(command)
         self._serial_port.close()
 
 
